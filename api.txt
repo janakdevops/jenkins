@@ -1,0 +1,31 @@
+curl -X post http://13.232.39.59:8080/job/pipeline/build --user admin:112eb493495f34343ac6940e2902dc3fbf
+curl -X post http://13.127.92.85:8080/job/test1/buildWithParameters --user janak:2b869de586c0e33de6dbbd10cea6f91b
+curl -X post http://13.127.92.85:8080/job/test1/buildWithParameters?var1=testing --user janak:2b869de586c0e33de6dbbd10cea6f91b
+
+
+- Disable/Enable Job
+curl -X post http://52.66.187.150:8080/job/second-jenkins-job/disable --user jan:00cac81682386c9e6f550e3a778c0543
+curl -X post http://52.66.187.150:8080/job/second-jenkins-job/enable --user jan:00cac81682386c9e6f550e3a778c0543
+
+
+- Check config.xml for the job so not post this time but we will use simple curl  (No POST Here)
+
+curl http://52.66.187.150:8080/job/second-jenkins-job/config.xml --user 1682386c9e6f550e3a778c0543
+
+
+- Json data for job
+
+curl -X post http://13.127.92.85:8080/job/test1/api/json --user janak:2b869de586c0e33de6dbbd10cea6f91b
+
+- XML data for build
+
+curl -X post http://13.127.92.85:8080/job/test1/api/xml --user janak:2b869de586c0e33de6dbbd10cea6f91b
+
+- Check Console Output for build. We need to specify build number
+
+curl -X post http://13.127.92.85:8080/job/test1/6/consoleText --user janak:2b869de586c0e33de6dbbd10cea6f91b
+
+
+- Restart Jenkins
+
+curl -X post http://52.66.187.150:8080/restart --user jan:00cac81682386c9e6f550e3a778c0543

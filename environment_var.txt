@@ -1,0 +1,13 @@
+echo "Generic Jenkins Variable"
+echo "Build Number $BUILD_NUMBER"
+echo "Node Name $NODE_NAME"
+echo "Job Name $JOB_NAME"
+echo "Executor Number $EXECUTOR_NUMBER"
+echo "Workspace $WORKSPACE"
+
+=> Git Specific Environmet Variable
+echo "Git Specific Environment Variable"
+echo "Git commit $GIT_COMMIT"
+echo "Git Branch $GIT_BRANCH"
+echo "Git URL $GIT_URL"
+

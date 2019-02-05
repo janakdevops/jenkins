@@ -1,0 +1,6 @@
+ssh -l janak -p 2222 13.232.39.59 who-am-i
+ssh -l janak -p 45425 52.66.187.150 build test
+ssh -l janak -p 45425 52.66.187.150 list-jobs
+ssh -l janak -p 45425 52.66.187.150 get-job test
+ssh -l janak -p 46457 52.66.187.150 console test 20
+ssh -l janak -p 45425 52.66.187.150 restart
